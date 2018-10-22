@@ -20,7 +20,7 @@ app.get('/items', (req, res) => {
   });
 });
 
-app.listen(process.env.port || 3000, () => {
-  console.log('listening on port 3000!!!!!');
-  console.log('hello is this working');
+// heroku dynamic port
+app.listen(process.env.PORT || 3000, () => {
+  console.log('listening on port 3000!');
 });

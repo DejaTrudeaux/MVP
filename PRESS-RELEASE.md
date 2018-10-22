@@ -19,26 +19,44 @@ Once the project moves into development, the press release can be used as a touc
 ## Heading ##
   > Name the product in a way the reader (i.e. your target customers) will understand.
 
+  Name-A-Pet
+
 ## Sub-Heading ##
   > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+
+  This app is for your typical animal-lover who likes seeing pictures of cute animals and is entertained by the thought of naming other people's pets.
 
 ## Summary ##
   > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
 
+  Do you like pictures and gifs of adorable fuzzy animals? Do you like giving things names? Well this is the app for you. Choose dog or cat on the homepage, where you will be able to view thousands of photos and name an animal or move to the next page. Your pet's name and your name (optional) will be displayed on the home page next to the image of your pet!
+
 ## Problem ##
   > Describe the problem your product solves.
+
+  This app solves the recurring problem of not being able to view records of all the cute animals you name on the internet every day.
 
 ## Solution ##
   > Describe how your product elegantly solves the problem.
 
+  Your named animals are saved to the homepage for everyone to see.
+
 ## Quote from You ##
   > A quote from a spokesperson in your company.
+
+  "I love animals, and I love giving nicknames on a regular basis. So that's why I felt there was a void that needed to be filled in this world. This is why I made Name-A-Pet."
 
 ## How to Get Started ##
   > Describe how easy it is to get started.
 
+  Getting started is easy! Just choose cats or dogs from the main page. From the next page, you can either click the next button to see the next pet, or type a name for the animal. Typing your name is optional.
+
 ## Customer Quote ##
   > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
 
+  "I absolutely love it. There are so many animals and different things to see."
+
 ## Closing and Call to Action ##
   > Wrap it up and give pointers where the reader should go next.
+
+  Try this app out, it's very fun. Tell your friends.

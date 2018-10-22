@@ -32,10 +32,10 @@ angular.module('dogPage')
 
 
 // cats
-angular.module('app')
-  .service('itemsService', function itemsService($http) {
+angular.module('catPage')
+  .service('catService', function catService($http) {
     this.getAll = (callback) => {
-      $http.get('/items')
+      $http.get('/cats')
         .then(({ data }) => {
           if (callback) {
             callback(data);

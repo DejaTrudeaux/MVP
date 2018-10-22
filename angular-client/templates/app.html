@@ -1,5 +1,31 @@
-<div>
+<!-- <div>
   <div>
     <list items="$ctrl.items"/>
   </div>
-</div>
+</div> -->
+
+<html ng-app="appMain">
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
+  <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.6.0.js" type="text/javascript"></script>
+  <script src="https://m-e-conroy.github.io/angular-dialog-service/javascripts/dialogs.min.js" type="text/javascript"></script>
+</head>
+
+<body ng-controller="dialogServiceTest" class="pad">
+  <h2>Name-A-Pet</h2><br />
+  <p>
+    Pick One: <br />
+  </p>
+  <div class="row">
+    <div class="col-md-12">
+      <button class="btn btn-primary" ng-click="launch('wait')">Cats</button>
+      <button class="btn btn-warning" ng-click="launch('create')">Dogs</button>
+    </div>
+  </div>
+  <br />
+
+  
+</body>
+
+</html>

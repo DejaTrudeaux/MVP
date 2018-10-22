@@ -1,11 +1,11 @@
 angular.module('dogPage')
   .controller('DogPageCtrl', (dogsService) => {
     dogsService.getAll((data) => {
-      this.items = data;
+      this.dogs = data;
     });
   })
   .component('dogPage', {
     bindings: {},
     controller: 'DogPageCtrl',
-    templateUrl: '/templates/app.html',
+    templateUrl: '/templates/dog.html',
   });

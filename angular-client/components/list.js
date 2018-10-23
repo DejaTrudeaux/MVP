@@ -3,8 +3,8 @@ angular.module('app')
     bindings: {
       items: '<',
     },
-    controller($window) {
-      this.items = $window.exampleVideoData;
+    controller() {   
+      
     },
     templateUrl: '/templates/list.html',
   });

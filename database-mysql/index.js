@@ -25,3 +25,4 @@ const save = (id, image, petname, username) => {
 };
 
 module.exports.selectAll = selectAll;
+module.exports.save = save;

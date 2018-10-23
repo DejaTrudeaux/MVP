@@ -32,26 +32,6 @@ app.post('/items', (req, res) => {
   });
 });
 
-// app.get('/dogs', (req, res) => {
-//   dogs.selectAll((err, data) => {
-//     if (err) {
-//       res.sendStatus(500);
-//     } else {
-//       res.json(data);
-//     }
-//   });
-// });
-
-// app.get('/cats', (req, res) => {
-//   cats.selectAll((err, data) => {
-//     if (err) {
-//       res.sendStatus(500);
-//     } else {
-//       res.json(data);
-//     }
-//   });
-// });
-
 // heroku dynamic port
 app.listen(process.env.PORT || 3000, () => {
   console.log('listening on port 3000!');

@@ -22,6 +22,16 @@ app.get('/items', (req, res) => {
   });
 });
 
+app.post('/items', (req, res) => {
+  items.save((id, image, petname, username, err, data) => {
+    if (err) {
+      res.sendStatus(500);
+    } else {
+      res.json(data);
+    }
+  });
+});
+
 // app.get('/dogs', (req, res) => {
 //   dogs.selectAll((err, data) => {
 //     if (err) {

@@ -20,4 +20,8 @@ const selectAll = (callback) => {
   });
 };
 
+const save = (id, image, petname, username) => {
+  connection.query(`INSERT into items (id, image, petname, username) value (${null}, ${image}, ${petname}, ${username})`);
+};
+
 module.exports.selectAll = selectAll;

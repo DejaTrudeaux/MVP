@@ -19,13 +19,13 @@
   </p>
   <div class="pickOne">
     
-    <img class="dogMainPic" src ="https://us.123rf.com/450wm/dualororua/dualororua1512/dualororua151200235/49351167-cute-fun-dog-cartoon.jpg?ver=6">
-    <img class="catMainPic" src ="http://www.morevectors.com/wp-content/uploads/2012/05/Cartoon-cat-vector-design.jpg">
+    <img class="dogMainPic" src ="https://us.123rf.com/450wm/valenty/valenty1708/valenty170800015/83846194-continuous-line-drawing-dog-dachshund-running-vector-illustration.jpg?ver=6">
+    <img class="catMainPic" src ="https://i.pinimg.com/originals/62/52/35/625235a19348d7b52f3090c2c8887849.jpg">
   </div>
   <div class="row">
     <div class="col-md-12">
-      <button class="btn btn-primary" ng-click="dogModal()">Cats</button>
-      <button class="btn btn-warning" ng-click="catModal()">Dogs</button>
+      <button class="btn btn-primary" ng-click="$ctrl.service.getDogs()">Cats</button>
+      <button class="btn btn-warning" ng-click="$ctrl.service.getCats()">Dogs</button>
     </div>
     <div class="named-list">
       <list items="$ctrl.items"></list>

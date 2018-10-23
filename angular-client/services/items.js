@@ -1,13 +1,10 @@
 // untouched
 angular.module('app')
   .service('itemsService', function itemsService($http) {
-    this.getAll = (callback) => {
-      console.log('sending get req');
+    this.getAll = (query, callback) => {
       $http.get('/items')
-        .then(( data ) => {
-          console.log(data, 'data');
+        .then(({ data }) => {
           if (callback) {
-            console.log('then');
             callback(data);
           }
         })
@@ -17,54 +14,30 @@ angular.module('app')
     };
   });
 
-// dogs for random dog image
-// angular.module('app')
-//   .service('itemsService', function ($http) {
-//     this.getAll = function (query, callback) {
-//       $http.get('https://api.thedogapi.com/v1/images/search', {
-//         headers: {
-//           'Content-Type': 'application/json',
-//           'x-api-key': '49f3c618-f343-43c9-985d-d773c9b33f98',
-//         },
-//       })
-//         .then(({ data }) => {
-//           if (callback) {
-//             callback(data);
-//           }
-//         })
-//         .catch((err) => {
-//           console.log(err);
-//         });
-//     };
-//   });
+const dogHeaders = {
+  'Content-Type': 'application/json',
+  'x-api-key': '49f3c618 - f343 - 43c9-985d-d773c9b33f98',
+};
+
+const catHeaders = {
+  'Content-Type': 'application/json',
+  'x-api-key': 'd31d51ea-3c31-4ccf-8464-35127783c345',
+};
 
 
-// // cats for random cat image
-//   .service('catService', function catService($http) {
-//     this.getAll = (callback) => {
-//       $http.get('/cats')
-//         .then(({ data }) => {
-//           if (callback) {
-//             callback(data);
-//           }
-//         })
-//         .catch((err) => {
-//           console.log(err);
-//         });
-//     };
-//   });
+// pet services
+angular.module('app')
+  .service('petService', function ($http) {
+    this.getAnimals = function (query, animalType) {
+      $http.get(`https://api.the${animalType}api.com/v1/images/search`, dogHeaders)
+        // .then((resp) => {
+        //   const data = resp.data;
+        //   return data;
+        // })
+        .then(({ data }) => data);
+    };
+  });
 
-// // list items to render to main page
-//   .service('petService', function catService($http) {
-//     this.getAll = (callback) => {
-//       $http.get('/pets')
-//         .then(({ data }) => {
-//           if (callback) {
-//             callback(data);
-//           }
-//         })
-//         .catch((err) => {
-//           console.log(err);
+// // .catch((err) => {
+// console.log(err);
 //         });
-//     };
-//   });

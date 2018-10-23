@@ -6,8 +6,9 @@ USE test;
 
 CREATE TABLE items (
   id int NOT NULL AUTO_INCREMENT,
-  quantity integer NOT NULL,
-  description varchar(50) NOT NULL,
+  image varchar(255) NOT NULL,
+  petname varchar(20) NOT NULL,
+  username varchar(20) NOT NULL,
   PRIMARY KEY (ID)
 );
 

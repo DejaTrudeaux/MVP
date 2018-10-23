@@ -1,11 +1,11 @@
 angular.module('modal')
-  .controller('ModalCtrl', (itemsService) => {
-    itemsService.getAll((data) => {
+  .controller('ModalCtrl', (petService) => {
+    petService.getAll((data) => {
       this.items = data;
     });
   })
   .component('modal', {
     bindings: {},
-    controller: 'AppCtrl',
+    controller: 'ModalCtrl',
     templateUrl: '/templates/modal.html',
   });

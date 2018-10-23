@@ -1,12 +1,14 @@
 angular.module('ModalPopup')
-  .controller('ModalCtrl', function ($modal) {
-    this.open = function () {
-      console.log('opening pop up');
-      const modalInstance = $modal.open({
-        templateUrl: 'modal.html',
-      });
-    };
-  })
+  .controller(
+  //   'ModalCtrl', function ($modal) {
+  //   this.open = function () {
+  //     console.log('opening pop up');
+  //     const modalInstance = $modal.open({
+  //       templateUrl: 'modal.html',
+  //     });
+  //   };
+  // }
+  )
   .component('modal', {
     bindings: {},
     controller: 'ModalCtrl',

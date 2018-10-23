@@ -12,20 +12,23 @@
   <script src="https://m-e-conroy.github.io/angular-dialog-service/javascripts/dialogs.min.js" type="text/javascript"></script>
 </head>
 
-<body ng-controller="dialogServiceTest" class="pad">
+<body ng-controller="MyCtrl" class="pad">
   <h2>Name-A-Pet</h2>
   <p>
     Pick One: <br />
   </p>
   <div class="pickOne">
     
-    <img class="dogMainPic" src ="https://us.123rf.com/450wm/dualororua/dualororua1512/dualororua151200235/49351167-cute-fun-dog-cartoon.jpg?ver=6">
-    <img class="catMainPic" src ="http://www.morevectors.com/wp-content/uploads/2012/05/Cartoon-cat-vector-design.jpg">
+    <img class="dogMainPic"  src ="https://us.123rf.com/450wm/dualororua/dualororua1512/dualororua151200235/49351167-cute-fun-dog-cartoon.jpg?ver=6">
+    <img class="catMainPic"  src ="http://www.morevectors.com/wp-content/uploads/2012/05/Cartoon-cat-vector-design.jpg">
   </div>
   <div class="row">
     <div class="col-md-12">
-      <button class="btn btn-primary" ng-click="launch('wait')">Cats</button>
-      <button class="btn btn-warning" ng-click="launch('create')">Dogs</button>
+      <button class="btn btn-primary" ng-click="dogModal()">Cats</button>
+      <button class="btn btn-warning" ng-click="catModal()">Dogs</button>
+    </div>
+    <div class="named-list">
+      <list items="$ctrl.items"></list>
     </div>
   </div>
   <br />

@@ -19,18 +19,27 @@ const catHeaders = {
 
 // pet services
 angular.module('app')
-  .service('petService', function petService ($http) {
-    this.getAnimals = (query, animalType) => {
+  .service('petService', function petService($http) {
+    this.getAnimals = (animalType, callback) => {
+      let templateUrl = `https://api.the${animalType}api.com/v1/images/search`;
       const headers = animalType === 'dog' ? dogHeaders : catHeaders;
-      $http.get(`https://api.the${animalType}api.com/v1/images/search`, headers)
-        // .then((resp) => {
-        //   const data = resp.data;
-        //   return data;
-        // })
-        .then(({ data }) => data);
+      $http.get(templateUrl, headers)
+        .then(({ data }) => callback(data[0].url)).catch((err) => {
+          console.log(err);
+        });
     };
   });
 
-// // .catch((err) => {
-// console.log(err);
-//         });
+
+// this is wrong
+angular.module('app')
+  .service('newPet', function newPet($http) {
+    this.getAnimals = (username, petName) => {
+      let templateUrl = `https://api.the${animalType}api.com/v1/images/search`;
+      const headers = animalType === 'dog' ? dogHeaders : catHeaders;
+      $http.get(templateUrl, headers)
+        .then(({ data }) => callback(data[0].url)).catch((err) => {
+          console.log(err);
+        });
+    };
+  });

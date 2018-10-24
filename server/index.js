@@ -17,13 +17,13 @@ app.get('/items', (req, res) => {
     if (err) {
       res.sendStatus(500);
     } else {
-      res.json(data);
+      res.JSON(data);
     }
   });
 });
 
 app.post('/items', (req, res) => {
-  items.save((id, image, petname, username, err, data) => {
+  items.save((obj) => {
     if (err) {
       res.sendStatus(500);
     } else {

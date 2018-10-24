@@ -80,18 +80,18 @@
 
               <div class="md-form mb-5">
                 <i class="fa fa-envelope prefix grey-text"></i>
-                <input type="text" id="defaultForm-yourname" class="form-control validate">
+                <input type="text" id="defaultForm-yourname" class="form-control validate" ng-model="username">
                 <label data-error="wrong" data-success="right" for="defaultForm-yourname">Your Name</label>
               </div>
               <div class="md-form mb-4">
                 <i class="fa fa-envelope prefix grey-text"></i>
-                <input type="text" id="defaultForm-animalname" class="form-control validate">
+                <input type="text" id="defaultForm-animalname" class="form-control validate" ng-model="petName">
                 <label data-error="wrong" data-success="right" for="defaultForm-animalname">Animal's Name</label>
               </div>
             </div>
             <div class="modal-footer d-flex justify-content-center">
               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save Name</button>
+              <button type="button" class="btn btn-primary" ng-click="$ctrl.newPet(username, petName)">Save Name</button>
             </div>
           </div>
         </div>

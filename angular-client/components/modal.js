@@ -1,4 +1,4 @@
-angular.module('ModalPopup')
+angular.module()
   .controller(
   //   'ModalCtrl', function ($modal) {
   //   this.open = function () {

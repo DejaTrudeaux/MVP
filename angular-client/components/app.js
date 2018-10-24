@@ -1,9 +1,12 @@
 angular.module('app')
-  .controller('AppCtrl', function AppCtrl(itemsService) {
+  .controller('AppCtrl', function AppCtrl(itemsService, petService) {
     itemsService.getAll((data) => {
       this.items = data;
-      console.log(data, 'inApp');
     });
+    petService.getAnimals(('dog', (url) => { 
+      // this.url = url;
+      console.log(this.url);
+    }));
   })
   .component('app', {
     bindings: {},

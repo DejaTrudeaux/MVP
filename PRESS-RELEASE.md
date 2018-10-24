@@ -29,7 +29,7 @@ Once the project moves into development, the press release can be used as a touc
 ## Summary ##
   > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
 
-  Do you like pictures and gifs of adorable fuzzy animals? Do you like giving things names? Well this is the app for you. Choose dog or cat on the homepage, where you will be able to view thousands of photos and name an animal or move to the next page. Your pet's name and your name (optional) will be displayed on the home page next to the image of your pet!
+  Do you like pictures and gifs of adorable fuzzy animals? Do you like giving things names? Well this is the app for you. Choose dog or cat on the homepage, where you will be able to view thousands of photos and name an animal. Your pet's name and your name will be displayed on the home page next to the image of your pet!
 
 ## Problem ##
   > Describe the problem your product solves.
@@ -49,7 +49,7 @@ Once the project moves into development, the press release can be used as a touc
 ## How to Get Started ##
   > Describe how easy it is to get started.
 
-  Getting started is easy! Just choose cats or dogs from the main page. From the next page, you can either click the next button to see the next pet, or type a name for the animal. Typing your name is optional.
+  Getting started is easy! Just choose cats or dogs from the main page. From the next page, you can either close the popup and open again to see the next pet, or type a name (and your name) for the animal.
 
 ## Customer Quote ##
   > Provide a quote from a hypothetical customer that describes how they experienced the benefit.

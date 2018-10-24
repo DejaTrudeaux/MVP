@@ -3,10 +3,6 @@ angular.module('app')
     itemsService.getAll((data) => {
       this.items = data;
     });
-    // petService.getAnimals(('dog', (url) => {
-    //   this.url = url;
-    //   console.log(this.url, 'is this it');
-    // }));
     this.getDog = () => {
       petService.getAnimals('dog', (newDog) => {
         this.pet = newDog;

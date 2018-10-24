@@ -1,7 +1,7 @@
 <div>
   <h4> Named Pets </h4>
-  <ul class="named-pet-list">
+  <div class="named-pet-list">
   There are <strong>{{$ctrl.items.length}}</strong> items.
-  <list-item ng-repeat="item in $ctrl.items" item="item" />
-  </ul>
+  <list-item ng-repeat="item in $ctrl.items | orderBy:'id':true" item="item" />
+  </div>
 </div>

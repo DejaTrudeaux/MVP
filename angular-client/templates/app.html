@@ -20,7 +20,7 @@
      font-family: courier new;
    }
    .dogs-cats-button{
-     padding-left: 200px;
+     padding-left: 210px;
      padding-top: 20px;
    }
    .heading{
@@ -42,6 +42,9 @@
    .modal-content{
      font-family: courier new;
    }
+   .modalpetpic {
+    max-width: 450px;
+  }
 
   </style>
 </head>
@@ -67,12 +70,12 @@
       
       <!-- Pet Modal -->
       <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog cascading-modal modal-avatar modal-sm" role="document">
+        <div class="modal-dialog cascading-modal modal-avatar modal-lg" role="document">
           <!-- Content -->
           <div class="modal-content">
             <!-- Header -->
             <div class="modal-header">
-              <img src={{$ctrl.pet}} >
+              <img class="modalpetpic" src={{$ctrl.pet}} >
               <!-- <h4 class="modal-title" id="myModalLabel">Name Me!</h4> -->
               <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
             </div>
@@ -91,7 +94,7 @@
             </div>
             <div class="modal-footer d-flex justify-content-center">
               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary" ng-click="$ctrl.namedPet(username, petName)">Save Name</button>
+              <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="$ctrl.namedPet(username, petName)">Save Name</button>
             </div>
           </div>
         </div>

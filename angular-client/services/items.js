@@ -31,14 +31,17 @@ angular.module('app')
   });
 
 
-// this is wrong
+// post request to database
 angular.module('app')
   .service('newPet', function newPet($http) {
-    this.getAnimals = (username, petName) => {
-      let templateUrl = `https://api.the${animalType}api.com/v1/images/search`;
-      const headers = animalType === 'dog' ? dogHeaders : catHeaders;
-      $http.get(templateUrl, headers)
-        .then(({ data }) => callback(data[0].url)).catch((err) => {
+    this.newAnimal = (obj) => {
+      $http.({
+        method: 'POST',
+        url: '/items',
+        data: obj,
+      })
+        .then((response) => console.log(response))
+        .catch((err) => {
           console.log(err);
         });
     };

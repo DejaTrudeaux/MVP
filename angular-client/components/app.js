@@ -3,13 +3,25 @@ angular.module('app')
     itemsService.getAll((data) => {
       this.items = data;
     });
-    petService.getAnimals(('dog', (url) => { 
-      // this.url = url;
-      console.log(this.url);
-    }));
+    // petService.getAnimals(('dog', (url) => {
+    //   this.url = url;
+    //   console.log(this.url, 'is this it');
+    // }));
+    this.getDog = () => {
+      petService.getAnimals('dog', (newDog) => {
+        this.pet = newDog;
+      });
+    };
+    this.getCat = () => {
+      petService.getAnimals('cat', (newCat) => {
+        this.pet = newCat;
+      });
+    };
   })
   .component('app', {
-    bindings: {},
+    bindings: {
+      pet: '<',
+    },
     controller: 'AppCtrl',
     templateUrl: '/templates/app.html',
   });

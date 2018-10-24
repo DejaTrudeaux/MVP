@@ -1,7 +1,8 @@
 angular.module('app')
-  .controller('AppCtrl', (itemsService) => {
+  .controller('AppCtrl', function AppCtrl(itemsService) {
     itemsService.getAll((data) => {
       this.items = data;
+      console.log(data, 'inApp');
     });
   })
   .component('app', {

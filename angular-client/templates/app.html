@@ -7,21 +7,52 @@
   <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet"> -->
   <style>
    .dogMainPic{
-     width: 250px;
+     width: 300px;
+     padding-left: 35px;
      /* padding:auto; */
    } 
    .catMainPic{
-     width: 150px;
+     width: 200px;
      /* padding:auto; */
    }
+   .named-list{
+     padding: 30px;
+     font-family: courier new;
+   }
+   .dogs-cats-button{
+     padding-left: 200px;
+     padding-top: 20px;
+   }
+   .heading{
+     padding-left: 30px;
+     font-family: courier new;
+   }
+   .petNameImg{
+     width: 150px;
+     padding-top: 10px;
+   }
+   .entry-username{
+     float: right;
+     padding: 15px;
+   }
+   .entry-animalname{
+     float: right;
+     padding: 15px;
+   }
+   .modal-content{
+     font-family: courier new;
+   }
+
   </style>
 </head>
 
 <body ng-controller="MyCtrl" class="pad">
-  <h2>Name-A-Pet</h2>
-  <p>
-    Pick One: <br />
-  </p>
+  <div class="heading">
+    <h2>Name-A-Pet</h2>
+    <p>
+      Pick One: <br />
+    </p>
+  </div>
   <div class="pickOne">
     
     <img class="dogMainPic" src ="https://ubisafe.org/images/doberman-drawing-line-6.png">
@@ -29,8 +60,10 @@
   </div>
   <div class="row">
     <div class="col-md-12">
-      <button class="btn btn-warning" data-toggle="modal" data-target="#myModal">Dogs</button>
-      <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">Cats</button>
+      <div class="dogs-cats-button">
+        <button class="btn btn-warning" data-toggle="modal" data-target="#myModal">Dogs</button>
+        <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">Cats</button>
+      </div>
       
       <!-- Modal -->
       <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">

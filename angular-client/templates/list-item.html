@@ -1,13 +1,10 @@
 <!-- <div>
   {{$ctrl.item.description}}
 </div> -->
-
 <li class="named-pet-entry">
-  <div class="entry-left">
-    <img class="entry-photo" src={{$ctrl.item.photo}} />
-  </div>
   <div class="entry-body">
-    <div class="entry-username">{{$ctrl.item.username}}</div>
-    <div class="entry-animalname">{{$ctrl.item.petname}}</div>
+    <img class="petNameImg" src={{$ctrl.item.image}}>
+    <div class="entry-username"><strong>Username: </strong>{{$ctrl.item.username}}</div>
+    <div class="entry-animalname"><strong>Pet Name: </strong>{{$ctrl.item.petname}}</div>
   </div>
 </li>

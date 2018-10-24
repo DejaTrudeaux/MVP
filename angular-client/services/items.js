@@ -1,13 +1,9 @@
 // untouched
 angular.module('app')
   .service('itemsService', function itemsService($http) {
-    this.getAll = () => {
+    this.getAll = (callback) => {
       $http.get('/items')
-        .then(({ data }) => data);
-    //     .catch((err) => {
-    //       console.log(err);
-    //     };
-    // };
+        .then(({ data }) => callback(data));
     };
   });
 

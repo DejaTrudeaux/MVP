@@ -15,13 +15,21 @@ const selectAll = (callback) => {
       console.log('selectall error');
     } else {
       callback(null, results);
-      console.log('good going it works');
+      // console.log(results);
     }
   });
 };
 
-const save = (id, image, petname, username) => {
-  connection.query(`INSERT into items (id, image, petname, username) value (${null}, ${image}, ${petname}, ${username})`);
+const save = (obj, callback) => {
+  const queryStr = 'INSERT into items (id, image, petname, username) values (?, ?, ?, ?)';
+  const queryArgs = [`${null}, ${obj.image}, ${obj.petname}, ${obj.username}`];
+  connection.query(queryStr, queryArgs, (err, results) => {
+    if (err) {
+      callback(err);
+    } else {
+      callback(results);
+    }
+  });
 };
 
 module.exports.selectAll = selectAll;

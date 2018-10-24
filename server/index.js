@@ -12,23 +12,24 @@ app.use(express.static(path.join(__dirname, '/../node_modules')));
 
 // untouched
 app.get('/items', (req, res) => {
-  console.log('SERVER!');
   items.selectAll((err, data) => {
-    if (err) {
-      res.sendStatus(500);
-    } else {
-      res.JSON(data);
-    }
-  });
-});
-
-app.post('/items', (req, res) => {
-  items.save((obj) => {
     if (err) {
       res.sendStatus(500);
     } else {
       res.json(data);
     }
+  });
+});
+
+app.post('/items', (req, res) => {
+  req.on('data', (chunk) => {
+    const obj = JSON.parse(chunk);
+    //console.log(obj);
+    items.save(obj, (response) => {
+      console.log(response, 'backfromDB');
+      res.status(201);
+      res.send(response);
+    });
   });
 });
 

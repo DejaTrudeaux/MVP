@@ -35,7 +35,7 @@ angular.module('app')
 angular.module('app')
   .service('newPet', function newPet($http) {
     this.newAnimal = (obj) => {
-      $http.({
+      $http({
         method: 'POST',
         url: '/items',
         data: obj,

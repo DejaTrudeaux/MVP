@@ -21,9 +21,8 @@ const selectAll = (callback) => {
 };
 
 const save = (obj, callback) => {
-  const queryStr = 'INSERT into items (id, image, petname, username) values (?, ?, ?, ?)';
-  const queryArgs = [`${null}, ${obj.image}, ${obj.petname}, ${obj.username}`];
-  connection.query(queryStr, queryArgs, (err, results) => {
+  const queryStr = `INSERT into items (id, image, petname, username) values (${null}, '${obj.image}', '${obj.petname}', '${obj.username}')`;
+  connection.query(queryStr, (err, results) => {
     if (err) {
       callback(err);
     } else {
